@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-plane position="0 0 -10" src="https://th.bing.com/th/id/R.0462086c098fe9156e13d5fe665b4a12?rik=RGw8gHxAY9Y%2b%2fA&riu=http%3a%2f%2f2.bp.blogspot.com%2f-4T15yJnuijM%2fU7Fv20jIdpI%2fAAAAAAAAFa8%2fKUtHG9Gs2z8%2fs1600%2f(GRASS%2b2)%2bseamless%2bturf%2blawn%2bgreen%2bground%2bfield%2btexture.jpg&ehk=AUsBUQ2jl6U2BOhT3yhUxatYsYRFir9s2fzhBT8kzs8%3d&risl=&pid=ImgRaw&r=0" width="5" rotation="-90 0 0" height="4"></a-plane>
+
+            <!--Camera-->
+            <a-entity position="0 3 3">
+                <a-camera></a-camera>
+            </a-entity>
+            
+            <!--Feet-->
+            <a-box position="-1 .5 -10" color="red"></a-box>
+            <a-box position="1 .5 -10" color="red"></a-box>
+
+            <!--Legs-->
+            <a-cylinder position="-1.02 2 -10.5" color="orange" height="3.5" radius=".5"></a-cylinder>
+            <a-cylinder position="1.02 2 -10.5" color="orange" height="3.5" radius=".5"></a-cylinder>
+
+            <!--Body-->
+            <a-icosahedron position="0 5.5 -10.5" color="yellow" radius="2.5"></a-icosahedron>
+            <a-box src="https://i0.wp.com/indiaeducationdiary.in/wp-content/uploads/2017/10/BYJUS_NEW_LOGO.png?fit=644%2C181&ssl=1" position="0 4.75 -8" width="2" height="1" ></a-box>
+            
+            <!--Text-->
+            <a-text value="My Robot!" position="-1.5 -2 -10" width="15" color="yellow"></a-text>
+
+            <!--Arms-->
+            <a-cylinder position="-2.15 4.2 -9.5" color="green" rotation="-200 0 0" radius="0.5" height="2.75"></a-cylinder>
+            <a-cylinder position="2.15 4.2 -9.5" color="green" rotation="-200 0 0" radius="0.5" height="2.75"></a-cylinder>
+
+            <!--Hands-->
+            <a-sphere position="-2.15 2.75 -8.85" color="cyan" radius="0.5"></a-sphere>
+            <a-sphere position="2.15 2.75 -8.85" color="cyan" radius="0.5"></a-sphere>
+
+            <!--Head/Face-->
+            <a-box position="0 7.5 -8.5" color="purple" width="2.5" height="2"></a-box>
+            <a-box position="-0.75 7.55 -8.4" width="0.75" height="0.75" ></a-box>
+            <a-box position="0.75 7.55 -8.4" width="0.75" height="0.75" ></a-box>
+
+            <a-entity animation="property:position; from:-0.735 7.1 -7.5; to: -0.75 7.15 -7.5; dir:alternate; loop: true; dur:1000" position="0 0.25 -0.5">
+                <a-sphere position="-0.735 7.25 -7.5" color="black" radius="0.25"></a-sphere>
+                <a-sphere position="0.735 7.25 -7.5" color="black" radius="0.25"></a-sphere>
+            </a-entity>
+
+            <a-entity animation="property:rotation; to: 0 360 0; easing:linear; loop: true; dur: 30000" position="0 3.2 -7.5">
+                <a-sphere position="0 9.2 -8" color="pink" radius="0.5" ></a-sphere>
+            </a-entity>
+
+            <a-ring position="0 9.2 -8" color="blue" radius="0.25" rotation="90 -360 0"></a-ring>
+
+            <a-sky color="black"></a-sky>
+        </a-scene>
+    </body>
+</html>
